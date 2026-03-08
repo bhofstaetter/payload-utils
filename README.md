@@ -1,11 +1,11 @@
-# Payload Helpers
+# Payload Utilities
 
 Utility functions for Payload CMS — type-safe validators, ID extraction, and document resolution.
 
 ## Installation
 
 ```sh
-npm install payload-helpers
+npm install payload-utilities
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ Creates a composite field validator by combining custom validators with a Payloa
 ```ts
 import type {DateField} from 'payload';
 import {date} from 'payload/shared';
-import {createValidator, type CustomValidator} from 'payload-helpers';
+import {createValidator, type CustomValidator} from 'payload-utilities';
 
 type Data = Task;
 type SiblingData = Data['schedule']['timeframe'];
@@ -59,7 +59,7 @@ export const timeframeValidator = createValidator<Data, SiblingData, Value, Fiel
 Extract IDs from values that are either an ID or an object with an `id` property.
 
 ```ts
-import {extractId, extractIds} from 'payload-helpers';
+import {extractId, extractIds} from 'payload-utilities';
 
 // Single values
 extractId(1);              // 1
@@ -75,7 +75,7 @@ extractIds([1, {id: 2}]);  // [1, 2]
 Resolves a value that is either a full document or an ID. If an object is passed, it is returned directly. If an ID is passed, the callback is called to fetch the document.
 
 ```ts
-import {getDocument} from 'payload-helpers';
+import {getDocument} from 'payload-utilities';
 
 const post = await getDocument(idOrPost, (id) =>
     payload.findByID({collection: 'posts', id}),

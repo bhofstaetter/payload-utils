@@ -1,13 +1,13 @@
 {
-    "name": "payload-helpers",
+    "name": "payload-utilities",
     "version": "1.0.0",
     "description": "Utility functions for Payload CMS — extract IDs, resolve documents, and compose field validators",
     "license": "MIT",
     "author": "Benedikt Hofstätter",
-    "homepage": "https://github.com/bhofstaetter/payload-helpers",
+    "homepage": "https://github.com/bhofstaetter/payload-utilities",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/bhofstaetter/payload-helpers.git"
+        "url": "git+https://github.com/bhofstaetter/payload-utilities.git"
     },
     "keywords": [
         "payload",
